@@ -1,0 +1,32 @@
+[
+  {
+    "model": "shop.product",
+    "pk": 1,
+    "fields": {
+      "name": "Lokta Paper Journal",
+      "description": "Handmade Nepali lokta paper journal with natural texture.",
+      "price": "599.00",
+      "image_url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 2,
+    "fields": {
+      "name": "Himalayan Honey",
+      "description": "Pure Himalayan wild honey from local beekeepers.",
+      "price": "899.00",
+      "image_url": "https://images.unsplash.com/photo-1519681399051-22a3674a9f61?q=80&w=1200"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 3,
+    "fields": {
+      "name": "Bamboo Toothbrush",
+      "description": "Eco-friendly bamboo toothbrush made in Nepal.",
+      "price": "149.00",
+      "image_url": "https://images.unsplash.com/photo-1607619056574-7b8d3cead9b1?q=80&w=1200"
+    }
+  }
+]

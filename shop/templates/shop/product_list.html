@@ -1,0 +1,21 @@
+{% extends 'shop/base.html' %}
+{% block content %}
+<h1 class="title">Nepali Local Products</h1>
+<div class="grid">
+  {% for p in products %}
+  <div class="card">
+    <a href="{% url 'shop:product_detail' p.id %}">
+      {% if p.image_url %}<img src="{{ p.image_url }}" alt="{{ p.name }}">{% endif %}
+      <h3>{{ p.name }}</h3>
+    </a>
+    <p class="price">Rs. {{ p.price }}</p>
+    <form action="{% url 'shop:add_to_cart' p.id %}" method="post">
+      {% csrf_token %}
+      <button class="btn">Add to Cart</button>
+    </form>
+  </div>
+  {% empty %}
+  <p>No products yet. Add some via the admin.</p>
+  {% endfor %}
+</div>
+{% endblock %}

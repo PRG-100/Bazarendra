@@ -1,0 +1,55 @@
+:root{
+  --primary:#55a656;
+  --primary-700:#3c7b3f;
+  --bg:#f7f9f7;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --border:#e5e7eb;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.6;
+}
+.container{max-width:1100px;margin:0 auto;padding:16px}
+.header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 0; border-bottom:1px solid var(--border);
+}
+.logo{font-weight:800;text-decoration:none;color:var(--primary);font-size:1.3rem}
+nav a{margin-left:16px;text-decoration:none;color:var(--text)}
+.title{margin:8px 0 16px 0}
+.grid{
+  display:grid;grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));gap:16px;
+}
+.card{
+  background:var(--card); border:1px solid var(--border); border-radius:14px; padding:12px;
+  box-shadow:0 1px 2px rgba(0,0,0,.03);
+}
+.card img{width:100%;height:180px;object-fit:cover;border-radius:8px}
+.price{font-weight:700;margin:6px 0}
+.btn, .btn-outline{
+  display:inline-block;border-radius:10px;padding:10px 14px;border:1px solid var(--primary);
+  background:var(--primary);color:white;text-decoration:none;cursor:pointer;
+}
+.btn:hover{filter:brightness(0.95)}
+.btn-outline{background:transparent;color:var(--primary)}
+.table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.table th, .table td{padding:10px;border-bottom:1px solid var(--border)}
+.cart-total{margin:12px 0}
+.form{display:grid;gap:10px;max-width:540px}
+.form input, .form textarea{width:100%;padding:10px;border:1px solid var(--border);border-radius:8px}
+.detail{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.detail-img{width:100%;border-radius:12px;border:1px solid var(--border)}
+.detail-info h1{margin:0}
+.messages{margin-bottom:12px}
+.message{padding:10px;border-radius:8px;margin:6px 0;border:1px solid var(--border);background:#fff}
+.message.success{border-color:var(--primary)}
+.footer{margin-top:40px;border-top:1px solid var(--border);padding:20px 0;color:var(--muted);font-size:.9rem}
+@media (max-width: 720px){
+  .detail{grid-template-columns:1fr}
+}

@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bazarendra</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  <header class="container header">
+    <a class="logo" href="{% url 'shop:product_list' %}">Bazarendra</a>
+    <nav>
+      <a href="{% url 'shop:product_list' %}">Home</a>
+      <a href="{% url 'shop:view_cart' %}">Cart</a>
+    </nav>
+  </header>
+  <main class="container">
+    {% if messages %}
+      <div class="messages">
+        {% for message in messages %}
+          <div class="message {{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="footer">
+    <div class="container">&copy; {{ now|date:"Y" }} Bazarendra • Made with ❤</div>
+  </footer>
+</body>
+</html>

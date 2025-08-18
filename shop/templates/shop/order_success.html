@@ -1,0 +1,6 @@
+{% extends 'shop/base.html' %}
+{% block content %}
+  <h1 class="title">Thank you!</h1>
+  <p>Your order #{{ order.id }} has been placed successfully.</p>
+  <p><a class="btn" href="{% url 'shop:product_list' %}">Back to Home</a></p>
+{% endblock %}
